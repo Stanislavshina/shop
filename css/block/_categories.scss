@@ -1,0 +1,92 @@
+/* categories */
+
+.categories {
+    background-color: #fff;
+    padding-top: 65px;
+    margin-bottom: 96px;
+}
+
+.categories-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.categories-item {
+    width: 360px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.categories--women {
+    background: url(../images/forwomen.png) no-repeat;
+}
+
+.categories--men {
+    background: url(../images/formen.png) no-repeat;
+}
+
+.categories--kids {
+    background: url(../images/forkids.png) no-repeat;
+}
+
+.categories--accesories {
+    margin-top: 30px;
+    height: 180px;
+    width: 100%;
+    background: url(../images/accesries.png) no-repeat;
+}
+
+.categories-sale {
+    color: #fff;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.categories-name {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #f16d7f;
+}
+
+@media (max-width: 1200px) {
+    .categories {
+        padding-top: 20px;
+        margin-bottom: 155px;
+    }
+    .categories-item {
+        width: 235px;
+        height: 170px;
+        background-size: cover;
+    }
+    .categories--accesories {
+        margin-top: 20px;
+        max-width: 740px;
+        width: 100%;
+        height: 116px;
+    }
+}
+
+@media (max-width: 760px) {
+    .categories {
+        padding-top: 64px;
+        margin-bottom: 64px;
+    }
+    .categories-item {
+        width: 340px;
+        height: 250px;
+        background-size: cover;
+        margin-bottom: 32px;
+    }
+    .categories--accesories {
+        max-width: 345px;
+        width: 100%;
+        height: 110px;
+        margin-top: 0;
+    }
+}

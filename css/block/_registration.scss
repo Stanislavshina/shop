@@ -1,0 +1,196 @@
+.registration {
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 64px;
+        margin-bottom: 96px;
+        .regform {
+            &-name {
+                border: none;
+                padding-bottom: 33px;
+                legend {
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #222222;
+                    padding-bottom: 20px;
+                }
+                .form-group {
+                    padding-bottom: 20px;
+                    input {
+                        width: 360px;
+                        padding: 13px 17px 16px 17px;
+                        font-weight: 300;
+                        font-size: 13px;
+                        line-height: 16px;
+                        color: #b1b1b1;
+                        border: 1px solid #a4a4a4;
+                    }
+                }
+                .form-checkbox {
+                    padding-top: 11px;
+                    input {
+                        margin-left: 20px;
+                        margin-right: 10px;
+                        font-weight: 300;
+                        font-size: 11px;
+                        line-height: 13px;
+                        color: #000000;
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+            &-details {
+                border: none;
+                legend {
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #222222;
+                    padding-bottom: 20px;
+                }
+                .form-group {
+                    padding-bottom: 20px;
+                    input {
+                        width: 360px;
+                        padding: 13px 17px 16px 17px;
+                        font-weight: 300;
+                        font-size: 13px;
+                        line-height: 16px;
+                        color: #b1b1b1;
+                        border: 1px solid #a4a4a4;
+                    }
+                    &:nth-child(3) {
+                        padding-bottom: 15px;
+                    }
+                }
+                p {
+                    width: 360px;
+                    font-weight: 300;
+                    font-size: 13px;
+                    line-height: 16px;
+                    color: #b1b1b1;
+                    padding-bottom: 40px;
+                }
+                button {
+                    padding: 16px 42px 17px 29px;
+                    background-color: $brand_color;
+                    border: none;
+                    font-family: lato;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    img {
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+        .reg-text {
+            max-width: 652px;
+            width: 100%;
+            h3 {
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 29px;
+                color: #000000;
+                margin-bottom: 22px;
+            }
+            p {
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 29px;
+                margin-bottom: 21px;
+            }
+            ul {
+                // list-style-image: url(../../images/liststyle.svg);
+                list-style: url(../images/liststyle.svg);
+                padding-left: 24px;
+
+                li {
+                    padding-bottom: 16px;
+                    padding-left: 24px;
+                    font-weight: 300;
+                    font-size: 24px;
+                    line-height: 29px;
+                    color: #000000;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .registration {
+        &-container {
+            padding-top: 40px;
+            .reg-text {
+                min-width: 354px;
+                width: 100%;
+                margin-left: 22px;
+                h3 {
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-bottom: 32px;
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+                ul {
+                    li {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .registration {
+        &-container {
+            justify-content: center;
+            flex-direction: column;
+            padding-top: 40px;
+            margin-bottom: 100px;
+            .regform {
+                margin-bottom: 40px;
+                .form-group {
+                    input {
+                        width: 357px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+            .reg-text {
+                // min-width: 354px;
+                width: 100%;
+                margin-left: 0px;
+                h3 {
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-bottom: 32px;
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+                ul {
+                    li {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,145 @@
+/* feedback */
+.feedback {
+    background: url(../images/feedback-bg.png) no-repeat;
+    background-size: cover;
+    background-color: #f4f4f4;
+    /* height: 500px; */
+}
+
+.feedback-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.feedback-info {
+    max-width: 360px;
+    width: 100%;
+    padding-top: 97px;
+    text-align: center;
+    margin-bottom: 126px;
+}
+
+.feedback-subscribe {
+    max-width: 557px;
+    width: 100%;
+    text-align: center;
+    padding-top: 150px;
+    margin-bottom: 156px;
+}
+
+.feedback-text {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #222224;
+    padding-top: 40px;
+}
+
+.feedback-title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 167.2%;
+    color: #222224;
+    text-transform: uppercase;
+}
+
+.feedback-minitext {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 167.2%;
+    color: #222224;
+    padding-top: 17px;
+    padding-bottom: 34px;
+}
+
+.feedback-form {
+    max-width: 356px;
+    width: 100%;
+    display: inline-flex;
+}
+
+.feedback-input {
+    font-family: lato;
+    width: 255px;
+    height: 49px;
+    background: #e1e1e1;
+    font-size: 14px;
+    line-height: 17px;
+    color: #222224;
+    opacity: 0.67;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    padding: 20px;
+}
+
+.subscribe-btn {
+    background: #f16d7f;
+    font-size: 14px;
+    line-height: 17px;
+    border: none;
+    color: #ffffff;
+    border-radius: 0 50px 50px 0;
+    padding: 15px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1200px) {
+    .feedback {
+        &-container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .feedback-info {
+                padding-top: 64px;
+                margin-bottom: 48px;
+                padding-bottom: 0;
+            }
+            .feedback-subscribe {
+                padding-top: 0;
+                margin-bottom: 140px;
+                h3 {
+                    font-size: 24px;
+                    line-height: 162%;
+                }
+                p {
+                    line-height: 162%;
+                    padding-top: 0;
+                    padding-bottom: 27px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .feedback {
+        &-container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .feedback-info {
+                padding-top: 64px;
+                margin-bottom: 59px;
+                padding-bottom: 0;
+            }
+            .feedback-subscribe {
+                padding-top: 0;
+                margin-bottom: 109px;
+                h3 {
+                    font-size: 24px;
+                    line-height: 153.2%;
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 153.2%;
+                    padding-top: 0;
+                    padding-bottom: 22px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,182 @@
+// header
+/* header */
+.header {
+    background-color: #222222;
+    padding: 18px 0;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.header-col1 {
+    display: flex;
+    align-items: center;
+}
+
+.header-link {
+    text-decoration: none;
+    color: transparent;
+    margin-right: 41px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.search-btn {
+    background: none;
+    border: none;
+}
+
+.search-btn:hover {
+    cursor: pointer;
+}
+
+.header-col2 {
+    display: flex;
+    align-items: center;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+}
+
+.login-link {
+    text-decoration: none;
+    color: transparent;
+    margin: 0 33px;
+}
+
+.menu-btn:hover {
+    cursor: pointer;
+}
+
+.main-menu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 235px;
+    background-color: #fff;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+    min-height: 764px;
+    &-box {
+        padding: 40px 35px;
+        position: relative;
+        button {
+            border: 0;
+            background-color: #fff;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            color: #000000;
+            svg {
+                width: 12px;
+                height: 12px;
+                transition: 2s;
+                fill: #6f6e6e;
+            }
+            &:hover {
+                cursor: pointer;
+                & svg {
+                    fill: $brand_color;
+                }
+            }
+        }
+        p {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+            margin-bottom: 24px;
+        }
+        .main-menu-list {
+            list-style: none;
+            padding-bottom: 20px;
+            .main-menu-item {
+                padding-bottom: 20px;
+                a {
+                    text-decoration: none;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #f16d7f;
+                    transition: 0.5s;
+                    &:hover {
+                        color: rgba(0, 0, 0, 0.21);
+                    }
+                }
+                .main-menu-sublist {
+                    padding-left: 20px;
+                    list-style: none;
+                    .main-menu-subitem {
+                        padding-bottom: 11px;
+                        a {
+                            font-size: 14px;
+                            line-height: 17px;
+                            color: #6f6e6e;
+                            transition: 0.25s;
+                            position: relative;
+                            -webkit-transition: all 0.3s linear;
+                            -moz-transition: all 0.3s linear;
+                            transition: all 0.3s linear;
+                            &:hover {
+                                color: #222;
+                            }
+                            &:after,
+                            &:before {
+                                content: "";
+                                background: $brand_color;
+                                position: absolute;
+                                width: 0;
+                                height: 1px;
+                                -webkit-transition: all 0.3s linear;
+                                -moz-transition: all 0.3s linear;
+                                transition: all 0.3s linear;
+                            }
+                            &:after {
+                                top: 100%;
+                                right: 0;
+                            }
+                            &:before {
+                                top: 0;
+                                left: 0;
+                            }
+                            &:hover:before,
+                            &:hover:after {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.main-menu-close {
+    display: none;
+}
+@media (max-width: 1200px) {
+    .main-menu {
+        display: none;
+    }
+}
+@media (max-width: 760px) {
+    .header-col2 {
+        justify-content: flex-end;
+    }
+    .login-link {
+        display: none;
+    }
+    .cart-link {
+        display: none;
+    }
+    @media (max-width: 1200px) {
+        .main-menu {
+            display: none;
+        }
+    }
+}

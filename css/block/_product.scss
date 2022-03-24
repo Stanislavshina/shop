@@ -1,0 +1,75 @@
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #f7f7f7;
+
+    img {
+        padding-top: 11px;
+        padding-bottom: 42px;
+        transition: all 1s ease-out;
+        &:hover {
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+    }
+    .slider-left {
+        position: absolute;
+        left: 0;
+        padding: 13px 18px;
+        border: none;
+        svg {
+            width: 13px;
+            height: 22px;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        &:hover svg {
+            fill: $brand_color;
+            transition: 0.3s;
+        }
+    }
+    .slider-right {
+        position: absolute;
+        right: 0;
+        padding: 13px 18px;
+        border: none;
+        svg {
+            width: 13px;
+            height: 22px;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        &:hover svg {
+            fill: $brand_color;
+            transition: 0.3s;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .product {
+        img {
+            padding: 30px 0;
+            // max-width: 465px;
+            width: 100%;
+            // max-height: 565px;
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .product {
+        img {
+            padding: 85px 0;
+            // max-width: 375px;
+            width: 100%;
+            // max-height: 455px;
+            height: 100%;
+        }
+    }
+}

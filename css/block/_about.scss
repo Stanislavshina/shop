@@ -1,0 +1,312 @@
+.about {
+    // margin-bottom: 129px;
+    .container-about {
+        margin-bottom: 129px;
+        border: 1px solid #eaeaea;
+        position: relative;
+        margin-top: -50px;
+        background-color: #fff;
+        padding-top: 65px;
+        text-align: center;
+        h2 {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: $brand_color;
+            margin-bottom: 12px;
+        }
+        .little {
+            border: none;
+            border-top: 3px solid $brand_color;
+            max-width: 63px;
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 12px;
+        }
+        h3 {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 22px;
+            color: #4d4d4d;
+            margin-bottom: 48px;
+        }
+        p {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: #5e5e5e;
+            margin-bottom: 32px;
+            padding-left: 295px;
+            padding-right: 295px;
+        }
+        .price {
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+            color: #ef5b70;
+            margin-bottom: 65px;
+        }
+        .big {
+            border: none;
+            border-top: 1px solid #eaeaea;
+            max-width: 641px;
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 65px;
+        }
+        .filter-about {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 48px;
+            details {
+                margin-right: 22px;
+                position: relative;
+                &:last-child {
+                    margin-right: 0;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+                summary {
+                    list-style: none;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #6f6e6e;
+                    &::after {
+                        content: url(../images/arrow.svg);
+                        margin-left: 9px;
+                    }
+                }
+                ul {
+                    list-style: none;
+                    position: absolute;
+                    background: #fff;
+                    top: 20px;
+                    right: -7px;
+                    z-index: 1000;
+                    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+                    li {
+                        text-align: center;
+                        padding: 5px 7px;
+                        a {
+                            text-decoration: none;
+                            font-size: 14px;
+                            line-height: 16px;
+                            transition: 0.5s;
+                            color: #6f6e6e;
+                            &:hover {
+                                border-bottom: 1px solid $brand_color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        button {
+            border: 1px solid #6f6e6e;
+            background-color: #fff;
+            padding: 14px 56px 13px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            border-color: $brand_color;
+            color: #fff;
+            box-shadow: 0 0 40px 40px #6f6e6e inset, 0 0 0 0 #6f6e6e;
+            -webkit-transition: all 150ms ease-in-out;
+            transition: all 500ms ease-in-out;
+            margin-bottom: 65px;
+            img {
+                padding-right: 20px;
+                padding-left: 23px;
+            }
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0 0 10px 0 $brand_color inset, 0 0 10px 4px $brand_color;
+                color: #6f6e6e;
+            }
+        }
+    }
+    .container-sales {
+        margin-bottom: 128px;
+        .sales-block {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 48px;
+            list-style: none;
+
+            .sales-card {
+                position: absolute;
+                max-width: 360px;
+                width: 100%;
+                background-color: #f8f8f8;
+                margin-bottom: 30px;
+                position: relative;
+                transition: 0.5s;
+                overflow: hidden;
+                &:hover {
+                    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
+                }
+                .overlay-sales {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 420px;
+                    background-color: rgba(58, 56, 56, 0.83);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    opacity: 0;
+                    transition: 0.5s;
+                    button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 13px 15px 12px;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: #ffffff;
+                        background-color: rgba(58, 56, 56, 0.83);
+                        border: 1px solid #fff;
+                        opacity: 0.9;
+                        position: relative;
+                        overflow: hidden;
+                        svg {
+                            width: 26px;
+                            height: 24px;
+                            margin-right: 11px;
+                            fill: #fff;
+                        }
+                        &:before {
+                            content: "";
+                            background-color: rgba(58, 56, 56, 0.83);
+                            height: 100%;
+                            width: 10px;
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            left: -25px;
+                            transform: skewX(-45deg) translateX(0);
+                            transition: none;
+                        }
+                        &:hover {
+                            cursor: pointer;
+                            background-color: #fff;
+                            color: $brand_color;
+                            border-bottom: 4px solid rgba(58, 56, 56, 0.83);
+                            opacity: 0.9;
+                            &:before {
+                                transform: skewX(-45deg) translateX(13.5em);
+                                transition: all 0.5s ease-in-out;
+                                opacity: 0.9;
+                            }
+                        }
+                        &:hover svg {
+                            fill: $brand_color;
+                        }
+                    }
+                }
+                &:hover .overlay-sales {
+                    opacity: 1;
+                }
+                .sales-description {
+                    margin: 25px 28px 20px 16px;
+                    .mini-sales-title {
+                        text-decoration: none;
+                        font-weight: normal;
+                        font-size: 13px;
+                        line-height: 16px;
+                        color: #000000;
+                        transition: 0.5s;
+                        &:hover {
+                            color: $brand_color;
+                        }
+                    }
+                    .mini-sales-text {
+                        font-weight: 300;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: #5d5d5d;
+                        padding-top: 13px;
+                        padding-bottom: 18px;
+                    }
+
+                    .sales-price {
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #f16d7f;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .about {
+        .container-about {
+            margin-top: 0;
+            border: none;
+            .little {
+                margin-bottom: 12px;
+            }
+
+            p {
+                padding-left: 105px;
+                padding-right: 105px;
+            }
+        }
+        .container-sales {
+            .sales-block {
+                flex-direction: row-reverse;
+                .sales-card {
+                    &:last-child {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .about {
+        margin-bottom: 64px;
+        .container-about {
+            margin-bottom: 64px;
+            h3 {
+                margin-bottom: 31px;
+            }
+            p {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .price {
+                margin-bottom: 32px;
+            }
+            .big {
+                margin-bottom: 45px;
+                max-width: 175px;
+                width: 100%;
+            }
+            .filter-about {
+                margin-bottom: 62px;
+                justify-content: space-around;
+                details {
+                    margin-right: 24px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    summary {
+                        font-size: 10px;
+                        line-height: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

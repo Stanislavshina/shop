@@ -1,0 +1,382 @@
+.feature-catalog {
+    .container-catalog {
+        position: relative;
+        padding-top: 51px;
+        .filter-menu {
+            display: flex;
+            margin-bottom: 64px;
+            // justify-content: space-between;
+            .filter-left {
+                .filter {
+                    position: absolute;
+                    z-index: 10000;
+                    background-color: #fff;
+                    summary {
+                        display: flex;
+                        list-style: none;
+                        span {
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 17px;
+                            color: #000000;
+                        }
+                        transition: 0.5s;
+                        align-items: center;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+
+                        svg {
+                            width: 15px;
+                            height: 10px;
+                            fill: #000000;
+                            transition: 0.5s;
+                            margin-left: 11px;
+                        }
+                    }
+                    &[open] {
+                        color: #f16d7f;
+                        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+                    }
+                    &[open] > summary {
+                        color: $brand_color;
+                        padding-bottom: 16px;
+                        align-items: center;
+                        p {
+                            color: $brand_color;
+                        }
+                        svg {
+                            fill: $brand_color;
+                        }
+                    }
+                }
+                .filter-under {
+                    padding-bottom: 18px;
+                    width: 328px;
+                    padding-right: 15px;
+                    padding-left: 17px;
+
+                    summary {
+                        list-style: none;
+                        border-left: 5px solid $brand_color;
+                        padding-left: 11px;
+                        border-bottom: 1px solid #ebebeb;
+                        padding-bottom: 11px;
+                        padding-top: 11px;
+                        // padding-right: 254px;
+                        transition: 0.5s;
+                    }
+                    ul {
+                        list-style: none;
+                        padding-left: 12px;
+                        padding-top: 24px;
+                        padding-bottom: 24px;
+                        li {
+                            margin-bottom: 11px;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                            a {
+                                text-decoration: none;
+                                font-size: 14px;
+                                line-height: 17px;
+                                color: #6f6e6e;
+                            }
+                        }
+                    }
+                }
+            }
+            .filter-right {
+                // position: absolute;
+                background-color: #fff;
+                display: flex;
+                margin-left: 395px;
+                .trend {
+                    z-index: 1000;
+                    margin-right: 28px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    .filter-trend {
+                        z-index: 10000;
+                        background-color: #fff;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                        summary {
+                            background-color: #fff;
+                            font-size: 14px;
+                            line-height: 17px;
+                            color: #6f6e6e;
+                            text-transform: uppercase;
+                            list-style: none;
+                            transition: 0.5s;
+                            padding-bottom: 12px;
+                            svg {
+                                width: 10px;
+                                height: 5px;
+                                margin-left: 10px;
+                                margin-bottom: 2px;
+                            }
+                        }
+                        form {
+                            position: absolute;
+                            background-color: #fff;
+                            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+                            padding: 7px 30px 11px 9px;
+                            input {
+                                font-size: 14px;
+                                line-height: 16px;
+
+                                color: #6f6e6e;
+                            }
+                            label {
+                                margin-left: 9px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .product-block {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 48px;
+            list-style: none;
+
+            .product-card {
+                position: absolute;
+                width: 360px;
+                background-color: #f8f8f8;
+                margin-bottom: 30px;
+                position: relative;
+                transition: 0.5s;
+                overflow: hidden;
+                &:hover {
+                    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
+                }
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 420px;
+                    background-color: rgba(58, 56, 56, 0.83);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    opacity: 0;
+                    transition: 0.5s;
+                    button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 13px 15px 12px;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: #ffffff;
+                        background-color: rgba(58, 56, 56, 0.83);
+                        border: 1px solid #fff;
+                        opacity: 0.9;
+                        position: relative;
+                        overflow: hidden;
+                        svg {
+                            width: 26px;
+                            height: 24px;
+                            margin-right: 11px;
+                            fill: #fff;
+                        }
+                        &:before {
+                            content: "";
+                            background-color: rgba(58, 56, 56, 0.83);
+                            height: 100%;
+                            width: 10px;
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            left: -25px;
+                            transform: skewX(-45deg) translateX(0);
+                            transition: none;
+                        }
+                        &:hover {
+                            cursor: pointer;
+                            background-color: #fff;
+                            color: $brand_color;
+                            border-bottom: 4px solid rgba(58, 56, 56, 0.83);
+                            opacity: 0.9;
+                            &:before {
+                                transform: skewX(-45deg) translateX(13.5em);
+                                transition: all 0.5s ease-in-out;
+                                opacity: 0.9;
+                            }
+                        }
+                        &:hover svg {
+                            fill: $brand_color;
+                        }
+                    }
+                }
+                &:hover .overlay {
+                    opacity: 1;
+                }
+                .product-description {
+                    margin: 25px 28px 20px 16px;
+                    .mini-product-title {
+                        text-decoration: none;
+                        font-weight: normal;
+                        font-size: 13px;
+                        line-height: 16px;
+                        color: #000000;
+                        transition: 0.5s;
+                        &:hover {
+                            color: $brand_color;
+                        }
+                    }
+                    .mini-product-text {
+                        font-weight: 300;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: #5d5d5d;
+                        padding-top: 13px;
+                        padding-bottom: 18px;
+                    }
+
+                    .product-price {
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #f16d7f;
+                    }
+                }
+            }
+        }
+        .pagination {
+            border: 1px solid #ebebeb;
+            padding: 15px 16px;
+            width: 285px;
+            margin: 0 auto;
+            margin-bottom: 96px;
+            ul {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .chevron {
+                    a {
+                        svg {
+                            width: 8px;
+                            height: 14px;
+                            margin-right: 18px;
+                        }
+                    }
+                }
+                .chevron_right {
+                    a {
+                        svg {
+                            width: 8px;
+                            height: 14px;
+                            margin-right: 0;
+                        }
+                    }
+                }
+                .pag_number {
+                    margin-right: 18px;
+                    &:nth-child(7) {
+                        margin-right: 0;
+                    }
+                    a {
+                        text-decoration: none;
+                        font-weight: 300;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #c4c4c4;
+                    }
+                    .pag_first {
+                        color: $brand_color;
+                    }
+                }
+                .pag_dots {
+                    a {
+                        text-decoration: none;
+                        color: #c4c4c4;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .feature-catalog {
+        .container-catalog {
+            padding-top: 24px;
+            .filter-menu {
+                margin-bottom: 40px;
+                .filter-right {
+                    margin-left: 445px;
+                }
+            }
+            .product-block {
+                margin-bottom: 40px;
+                .product-card {
+                    margin-bottom: 16px;
+                    &:nth-child(3) {
+                        display: none;
+                    }
+                }
+            }
+            .pagination {
+                margin-bottom: 63px;
+            }
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .feature-catalog {
+        .container-catalog {
+            padding-top: 24px;
+            .filter-menu {
+                margin-bottom: 32px;
+                .filter-left {
+                    .filter {
+                        summary {
+                            svg {
+                                margin-left: 0;
+                                // margin-top: 5px;
+                                width: 37px;
+                                height: 25px;
+                                fill: #000000;
+                            }
+                            span {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .filter-right {
+                    margin-left: 80px;
+                    .trend {
+                        margin-right: 24px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                        .filter-trend {
+                            summary {
+                                font-size: 12px;
+                                line-height: 14px;
+                                svg {
+                                    margin-left: 9px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

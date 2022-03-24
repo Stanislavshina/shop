@@ -1,0 +1,22 @@
+.content-title {
+    background-color: #f8f3f4;
+    .container {
+        h1 {
+            text-transform: uppercase;
+            font-size: 24px;
+            line-height: 29px;
+            color: $brand_color;
+            padding: 60px 0;
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .content-title {
+        .container {
+            h1 {
+                text-align: center;
+            }
+        }
+    }
+}
